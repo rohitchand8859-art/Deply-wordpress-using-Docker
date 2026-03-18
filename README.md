@@ -32,19 +32,19 @@ This project includes:
 ## EC2 Setup:
 
 1. Launch an EC2 instance-
-![](./Pictures/1.png)
+![](./1.png)
 
 2. Install Docker-
-![](./Pictures/3.png)
+![](./3.png)
 
 3. Start and enable Docker-
-![](./Pictures/4.png)
+![](./4.png)
 
 ## Step 1: Run MySQL Database Container
 
      docker run -d --name mydb -e WYSQL_ROOT_PASSWORD=root@123 -e MYSQL_DATABASE=wordpressdb mysql
 
-![](./Pictures/5.png)
+![](./5.png)
 
 ## Step 2: Run Web Application Container
      docker run -d -p 80:80 --name wordpressapp 
@@ -53,13 +53,13 @@ This project includes:
      -e WORDPRESS_DB_PASSWORD=root@123 
      -e WORDPRESS_DB_NAME=wordpressdb -- link mydb:mysql wordpress
 
-![](./Pictures/6.png)
+![](./6.png)
 
 ## Step 4: Access Application from Browser
 
 Use EC2 public IP:
 
-![](./Pictures/8.png)
+![](./8.png)
 
 ## Learning Outcomes
 
